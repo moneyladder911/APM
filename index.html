@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO Meta Tags -->
-    <title>Warsztat Samochodowy Nowy Sącz | APM Automotive & Home Solutions</title>
+    <title>Warsztat Samochodowy Nowy Sącz | APM Automotive</title>
     <meta name="description"
-        content="Profesjonalny warsztat samochodowy w Nowym Sączu. Mechanik, blacharz, lakiernik i diagnostyka komputerowa. Sprawdź APM Automotive & Home Solutions – najwyższa jakość napraw!">
+        content="Profesjonalny warsztat samochodowy w Nowym Sączu. Mechanik, blacharz, lakiernik i diagnostyka komputerowa. Sprawdź APM Automotive – najwyższa jakość napraw!">
     <meta name="keywords"
         content="warsztat samochodowy Nowy Sącz, auto serwis Nowy Sącz, mechanik samochodowy Nowy Sącz, diagnostyka komputerowa Nowy Sącz, blacharz lakiernik Nowy Sącz">
     <link rel="canonical" href="https://apmautoserwis.pl/">
@@ -162,7 +162,7 @@
 
         /* Hero Section */
         #hero {
-            padding: 12rem 0 8rem;
+            padding: 8rem 0 5rem;
             background: linear-gradient(135deg, #fefefe 0%, #fdeeee 100%);
             position: relative;
             overflow: hidden;
@@ -199,7 +199,7 @@
 
         /* About & SEO Content */
         section {
-            padding: 6rem 0;
+            padding: 4rem 0;
         }
 
         .bg-gray {
@@ -209,7 +209,7 @@
         .grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 2.5rem;
             align-items: center;
         }
 
@@ -233,8 +233,8 @@
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
 
         .service-card {
@@ -310,11 +310,69 @@
             padding-top: 0.5rem;
         }
 
+        /* Price List Table */
+        .pricing-container {
+            margin-top: 3rem;
+            overflow-x: auto;
+        }
+
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            min-width: 600px;
+        }
+
+        .pricing-table th {
+            background: var(--secondary);
+            color: #fff;
+            padding: 1.2rem 1.5rem;
+            text-align: left;
+            font-family: var(--font-hdr);
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+
+        .pricing-table td {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.95rem;
+        }
+
+        .pricing-table tr.category-row td {
+            background: #fafafa;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.05rem;
+            padding: 1.5rem 1.5rem 0.8rem;
+        }
+
+        .pricing-table tr:hover:not(.category-row):not(th) {
+            background: #fffafa;
+        }
+
+        .price-col {
+            text-align: right;
+            font-weight: 700;
+            color: var(--secondary);
+            width: 200px;
+        }
+
+        .price-note {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
         /* Footer */
         footer {
             background: var(--secondary);
             color: #fff;
-            padding: 5rem 0 2rem;
+            padding: 3rem 0 2rem;
         }
 
         .footer-grid {
@@ -398,7 +456,7 @@
     {
       "@context": "https://schema.org",
       "@type": "AutoRepair",
-      "name": "APM Automotive & Home Solutions",
+      "name": "APM Automotive",
       "image": "https://apmautoserwis.pl/logo.png",
       "address": {
         "@type": "PostalAddress",
@@ -429,7 +487,7 @@
         }
       ],
       "priceRange": "$$",
-      "description": "Profesjonalny warsztat samochodowy w Nowym Sączu. Specjalizacja: mechanika, diagnostyka komputerowa, blacharstwo i lakiernictwo.",
+      "description": "Profesjonalny warsztat samochodowy w Nowym Sączu. Specjalizacja: mechanika, elektromechanika, klimatyzacja, wulkanizacja i diagnostyka komputerowa.",
       "hasMap": "https://www.google.com/maps?cid=YOUR_CID"
     }
     </script>
@@ -437,26 +495,46 @@
     <nav id="main-nav">
         <div class="container nav-inner">
             <a href="#" class="logo">
-                <svg viewBox="0 0 300 100">
-                    <path d="M50 40 C 70 20, 150 15, 250 45 L 260 55 C 240 50, 200 45, 150 45 L 50 45 Z"
-                        fill="#1a1c20" />
-                    <text x="70" y="70" font-family="Arial, sans-serif" font-weight="900" font-size="32"
-                        fill="#1a1c20">APM</text>
-                    <rect x="50" y="75" width="200" height="20" fill="#e31e24" rx="2" />
-                    <circle cx="50" cy="85" r="8" fill="#e31e24" />
-                    <path d="M250 75 L 265 75 L 265 95 L 250 95 L 255 85 Z" fill="#e31e24" />
-                    <text x="150" y="90" font-family="Arial, sans-serif" font-weight="bold" font-size="12" fill="white"
-                        text-anchor="middle">AUTO SERWIS</text>
+                <svg viewBox="0 0 450 200" style="height: 60px; width: auto;">
+                    <!-- Car Silhouette -->
+                    <path d="M70 70 C 120 30, 250 20, 380 70 M 380 70 L 420 100 M 420 100 C 400 90, 380 85, 360 85"
+                        fill="none" stroke="#1a1c20" stroke-width="3" stroke-linecap="round" />
+                    <path d="M80 85 C 150 45, 300 45, 410 110" fill="none" stroke="#1a1c20" stroke-width="4"
+                        stroke-linecap="round" />
+
+                    <!-- APM Text -->
+                    <text x="110" y="125" font-family="Arial Black, sans-serif" font-weight="900" font-size="70"
+                        font-style="italic" letter-spacing="-2">
+                        <tspan fill="#e31e24">A</tspan>
+                        <tspan fill="#1a1c20">PM</tspan>
+                    </text>
+
+                    <!-- Wrench Banner -->
+                    <path
+                        d="M30 145 C 30 125, 80 125, 80 145 L 340 145 L 370 120 L 410 145 L 370 170 L 340 145 L 80 145 C 80 165, 30 165, 30 145 Z"
+                        fill="#e31e24" />
+                    <!-- Wrench Teeth (Left) -->
+                    <circle cx="55" cy="145" r="15" fill="white" />
+                    <path
+                        d="M55 130 L 58 135 L 52 135 Z M 55 160 L 58 155 L 52 155 Z M 40 145 L 45 142 L 45 148 Z M 70 145 L 65 142 L 65 148 Z"
+                        fill="#e31e24" />
+
+                    <!-- Auto Serwis Text -->
+                    <text x="215" y="160" font-family="Arial Black, sans-serif" font-weight="900" font-size="22"
+                        font-style="italic" fill="white" text-anchor="middle">AUTO SERWIS</text>
                 </svg>
             </a>
             <ul class="nav-links">
                 <li><a href="#o-nas">O nas</a></li>
                 <li><a href="#uslugi">Usługi</a></li>
+                <li><a href="#cennik">Cennik</a></li>
                 <li><a href="#dlaczego-my">Dlaczego my</a></li>
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="#kontakt">Kontakt</a></li>
             </ul>
-            <button class="cta-btn" onclick="window.location.href='tel:+48665898811'">Zadzwoń teraz</button>
+            <a href="tel:+48665898811" class="cta-btn" style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 1.1rem;">📞</span> +48 665 898 811
+            </a>
         </div>
     </nav>
 
@@ -465,7 +543,7 @@
             <div class="hero-content" data-reveal>
                 <span class="hero-tag">Nowoczesny Auto Serwis</span>
                 <h1>Profesjonalny <span>Warsztat Samochodowy Nowy Sącz</span></h1>
-                <p class="hero-desc">Jeśli szukasz zaufanego mechanika w Nowym Sączu, APM Automotive & Home Solutions to
+                <p class="hero-desc">Jeśli szukasz zaufanego mechanika w Nowym Sączu, APM Automotive to
                     miejsce dla Ciebie. Oferujemy kompleksowe naprawy, diagnostykę i serwis wszystkich marek.</p>
                 <div style="display: flex; gap: 1rem;">
                     <a href="#uslugi" class="cta-btn" style="background: var(--secondary);">Sprawdź usługi</a>
@@ -496,15 +574,15 @@
                 </div>
                 <div class="content-box" data-reveal>
                     <span class="section-tag">Poznaj nas lepiej</span>
-                    <h2>Twój zaufany <span>Auto Serwis w Nowym Sączu</span></h2>
-                    <p style="font-size: 0.95rem;"><strong>APM Automotive & Home Solutions</strong> to nowoczesny
-                        <strong>warsztat samochodowy Nowy Sącz</strong> prowadzony przez pasjonatów z ponad 10-letnim
-                        doświadczeniem. Specjalizujemy się w kompleksowej mechanice, zaawansowanej diagnostyce
-                        komputerowej oraz profesjonalnym blacharstwie i lakiernictwie.</p>
-                    <p style="font-size: 0.95rem;">Nasz <strong>auto serwis Nowy Sącz</strong> stawia na uczciwość,
-                        szybkość działania i najwyższą jakość obsługi aut osobowych oraz dostawczych. Z dumą wspieramy
-                        kierowców z Nowego Sącza i okolicznych miejscowości, dbając o to, by każdy pojazd opuszczający
-                        ul. Barską 34 był w pełni sprawny i bezpieczny.</p>
+                    <h2>Twój zaufany <span>warsztat samochodowy w Nowym Sączu</span></h2>
+                    <p style="font-size: 0.95rem;"><strong>APM Automotive</strong> to nowoczesny warsztat samochodowy w
+                        Nowym Sączu, działający od 2012 roku. Od ponad 10 lat świadczymy profesjonalne usługi jako auto
+                        serwis w Nowym Sączu, oferując kompleksową mechanikę pojazdową, diagnostyka komputerowa oraz
+                        blacharstwo i lakiernictwo.</p>
+                    <p style="font-size: 0.95rem;">Obsługujemy samochody osobowe i dostawcze. Wyróżnia nas uczciwa
+                        wycena, szybkie terminy realizacji oraz indywidualne podejście do każdego klienta.</p>
+                    <p style="font-size: 0.95rem;">Z dumą obsługujemy kierowców z Nowego Sącza i okolic. Każdy pojazd
+                        opuszczający nasz warsztat przy ul. Barskiej 34 jest w pełni sprawny i bezpieczny.</p>
                 </div>
             </div>
         </div>
@@ -521,58 +599,132 @@
                     satysfakcji.</p>
             </div>
 
-            <div class="services-grid">
+            <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
                 <!-- Usługa 1 -->
                 <div class="service-card" data-reveal>
                     <div class="service-icon">⚙️</div>
-                    <h3>Mechanika Samochodowa</h3>
-                    <p>Jako doświadczony <strong>mechanik samochodowy Nowy Sącz</strong>, zajmujemy się naprawami
-                        silników, układów hamulcowych, zawieszeń oraz skrzyń biegów. Stosujemy tylko sprawdzone części
-                        zamienne.</p>
+                    <h3>Mechanika</h3>
+                    <p>Kompleksowe naprawy silników, zawieszeń i układów hamulcowych. Jako rzetelny <strong>mechanik
+                            Nowy Sącz</strong>, dbamy o każdy detal Twojego auta.</p>
                 </div>
                 <!-- Usługa 2 -->
                 <div class="service-card" data-reveal style="transition-delay: 0.1s;">
-                    <div class="service-icon">💻</div>
-                    <h3>Diagnostyka Komputerowa</h3>
-                    <p>Profesjonalna <strong>diagnostyka komputerowa Nowy Sącz</strong> pozwala nam na szybkie i
-                        bezbłędne wykrycie usterek w nowoczesnych autach. Oszczędzamy Twój czas i pieniądze na zbędne
-                        wymiany części.</p>
+                    <div class="service-icon">⚡</div>
+                    <h3>Elektromechanika</h3>
+                    <p>Naprawa instalacji elektrycznych, alternatorów i rozruszników. Profesjonalny <strong>auto serwis
+                            Nowy Sącz</strong> z nowoczesnym podejściem.</p>
                 </div>
                 <!-- Usługa 3 -->
                 <div class="service-card" data-reveal style="transition-delay: 0.2s;">
-                    <div class="service-icon">🛠️</div>
-                    <h3>Blacharstwo i Lakiernictwo</h3>
-                    <p>Twój samochód ucierpiał w stłuczce? Nasz <strong>blacharz lakiernik Nowy Sącz</strong> przywróci
-                        mu pierwotny blask. Oferujemy naprawy bezgotówkowe i idealne dopasowanie koloru.</p>
+                    <div class="service-icon">❄️</div>
+                    <h3>Klimatyzacja</h3>
+                    <p>Pełny serwis klimatyzacji: odgrzybianie, sprawdzanie szczelności i napełnianie czynnika. Komfort
+                        jazdy w każdą pogodę.</p>
                 </div>
                 <!-- Usługa 4 -->
                 <div class="service-card" data-reveal>
-                    <div class="service-icon">❄️</div>
-                    <h3>Serwis Klimatyzacji</h3>
-                    <p>Zadbaj o komfort i zdrowie podczas jazdy. Oferujemy odgrzybianie, sprawdzanie szczelności oraz
-                        napełnianie klimatyzacji czynnikiem startego i nowego typu.</p>
+                    <div class="service-icon">⭕</div>
+                    <h3>Wulkanizacja</h3>
+                    <p>Szybka wymiana opon, wyważanie kół i naprawa ogumienia. Zadbaj o przyczepność i bezpieczeństwo na
+                        drodze.</p>
                 </div>
                 <!-- Usługa 5 -->
                 <div class="service-card" data-reveal style="transition-delay: 0.1s;">
-                    <div class="service-icon">⚡</div>
-                    <h3>Elektryka i Elektronika</h3>
-                    <p>Naprawiamy instalacje elektryczne, alternatory, rozruszniki oraz systemy komfortu. Nowoczesny
-                        <strong>auto serwis Nowy Sącz</strong> nie może pominąć zaawansowanej elektroniki.
-                    </p>
-                </div>
-                <!-- Usługa 6 -->
-                <div class="service-card" data-reveal style="transition-delay: 0.2s;">
-                    <div class="service-icon">📋</div>
-                    <h3>Przeglądy Okresowe</h3>
-                    <p>Regularne przeglądy to klucz do niezawodności. W APM Automotive & Home Solutions sprawdzimy stan
-                        płynów, filtrów i
-                        ogólną kondycję Twojego pojazdu przed dłuższą trasą.</p>
+                    <div class="service-icon">�</div>
+                    <h3>Diagnostyka Komputerowa</h3>
+                    <p>Błyskawiczne wykrywanie błędów i usterek. <strong>Diagnostyka komputerowa Nowy Sącz</strong> to
+                        nasza specjalność.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="dlaczego-my">
+    <!-- SECTION CENNIK -->
+    <section id="cennik">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 3rem;" data-reveal>
+                <span class="section-tag">Przejrzyste ceny</span>
+                <h2>Cennik Usług Serwisowych</h2>
+                <div style="width: 60px; height: 3px; background: var(--primary); margin: 1.5rem auto;"></div>
+            </div>
+
+            <div class="pricing-container" data-reveal>
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Rodzaj Usługi</th>
+                            <th class="price-col">Cena</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="category-row">
+                            <td colspan="2">Usługi Elektromechaniczne:</td>
+                        </tr>
+                        <tr>
+                            <td>Diagnostyka komputerowa</td>
+                            <td class="price-col">100,00 zł</td>
+                        </tr>
+                        <tr>
+                            <td>Naprawy elektromechaniczne /godz</td>
+                            <td class="price-col">110,00 zł</td>
+                        </tr>
+
+                        <tr class="category-row">
+                            <td colspan="2">Serwis Klimatyzacji:</td>
+                        </tr>
+                        <tr>
+                            <td>Przegląd klimatyzacji – komplet (bez napraw)</td>
+                            <td class="price-col">230,00 zł</td>
+                        </tr>
+                        <tr>
+                            <td>Przegląd klimatyzacji – bez odkażania</td>
+                            <td class="price-col">160,00 zł</td>
+                        </tr>
+                        <tr>
+                            <td>Płukanie układu klimatyzacji</td>
+                            <td class="price-col">450,00 zł</td>
+                        </tr>
+                        <tr>
+                            <td>Naprawy układu klimatyzacji /godz</td>
+                            <td class="price-col">110,00 zł</td>
+                        </tr>
+                        <tr>
+                            <td>Diagnostyka i wycena naprawy układu klimatyzacji</td>
+                            <td class="price-col">200,00 zł</td>
+                        </tr>
+
+                        <tr class="category-row">
+                            <td colspan="2">Naprawy Mechaniczne Samochodów:</td>
+                        </tr>
+                        <tr>
+                            <td>Naprawy mechaniczne /godz</td>
+                            <td class="price-col">110,00 zł</td>
+                        </tr>
+                        <tr>
+                            <td>Wymiana oleju silnikowego z filtrami***</td>
+                            <td class="price-col">50,00 – 150,00 zł</td>
+                        </tr>
+                        <tr>
+                            <td>Wymiana oleju z filtrem oleju ***</td>
+                            <td class="price-col">30,00 – 80,00 zł</td>
+                        </tr>
+
+                        <tr class="category-row">
+                            <td colspan="2">Wymiana Rozrządu:</td>
+                        </tr>
+                        <tr>
+                            <td>Silniki benzynowe, diesla</td>
+                            <td class="price-col">350,00 – 550,00 zł</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="price-note">*** Cena usługi uzależniona od modelu pojazdu i zakresu prac. Podane ceny są
+                    cenami orientacyjnymi.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="dlaczego-my" class="bg-gray">
         <div class="container grid-2">
             <div class="content-box" data-reveal>
                 <span class="section-tag">Nasze atuty</span>
@@ -620,8 +772,7 @@
                 <div style="border-left: 3px solid var(--primary); padding-left: 1.5rem;">
                     <p style="color: #fff; font-style: italic; font-size: 1.1rem;">"Traktujemy Twój samochód tak, jakby
                         był naszą własną własnością. Precyzja, pasja i profesjonalizm to nasze fundamenty."</p>
-                    <p style="margin-top: 1rem; font-weight: 700; color: var(--primary);">– Zespół APM Automotive & Home
-                        Solutions</p>
+                    <p style="margin-top: 1rem; font-weight: 700; color: var(--primary);">– Zespół APM Automotive</p>
                 </div>
             </div>
         </div>
@@ -636,7 +787,7 @@
                     <p>Nasz <strong>warsztat samochodowy Nowy Sącz</strong> znajduje się w dogodnej lokalizacji, co
                         sprawia, że jesteśmy pierwszym wyborem dla kierowców z całej Sądecczyzny. Obsługujemy nie tylko
                         miasto Nowy Sącz, ale również wszystkie pobliskie gminy i miejscowości.</p>
-                    <p>Do APM Automotive & Home Solutions najczęściej trafiają klienci z:</p>
+                    <p>Do APM Automotive najczęściej trafiają klienci z:</p>
                     <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
                         <li style="color: var(--text-light); font-weight: 600;">✅ Stary Sącz</li>
                         <li style="color: var(--text-light); font-weight: 600;">✅ Chełmiec</li>
@@ -686,7 +837,7 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-q">Ile kosztuje diagnostyka komputerowa w APM Automotive & Home Solutions?
+                    <div class="faq-q">Ile kosztuje diagnostyka komputerowa w APM Automotive?
                         <span>+</span>
                     </div>
                     <div class="faq-a">Cena za profesjonalną <strong>diagnostykę komputerową Nowy Sącz</strong> w naszym
@@ -745,6 +896,14 @@
                                 <div>ul. Barska 34, 33-300 Nowy Sącz</div>
                             </div>
                         </div>
+                        <div style="display: flex; gap: 1rem; align-items: center;">
+                            <div style="color: #1877F2; font-size: 1.5rem;">📱</div>
+                            <div>
+                                <div style="font-weight: 700;">Facebook:</div>
+                                <div><a href="https://www.facebook.com/apmautoserwis/" target="_blank"
+                                        style="color: #1877F2; font-weight: 600;">Zaobserwuj nas na Facebooku</a></div>
+                            </div>
+                        </div>
                     </div>
 
                     <div style="margin-top: 3rem; background: #fff; padding: 2rem; border-radius: 10px;">
@@ -799,28 +958,45 @@
 
 
     <footer
-        style="background: var(--bg-light); border-top: 1px solid rgba(0,0,0,0.05); padding: 4rem 0 2rem; color: var(--text-main);">
-        <div class="container">
-            <div style="text-align: center; margin-bottom: 2rem;">
-                <a href="#" class="logo" style="display: inline-block; margin-bottom: 1.5rem;">
-                    <svg viewBox="0 0 300 100" style="height: 60px; width: auto;">
-                        <path d="M50 40 C 70 20, 150 15, 250 45 L 260 55 C 240 50, 200 45, 150 45 L 50 45 Z"
-                            fill="#1a1c20" />
-                        <text x="70" y="70" font-family="Arial, sans-serif" font-weight="900" font-size="32"
-                            fill="#1a1c20">APM</text>
-                        <rect x="50" y="75" width="200" height="20" fill="#e31e24" rx="2" />
-                        <circle cx="50" cy="85" r="8" fill="#e31e24" />
-                        <path d="M250 75 L 265 75 L 265 95 L 250 95 L 255 85 Z" fill="#e31e24" />
-                        <text x="150" y="90" font-family="Arial, sans-serif" font-weight="bold" font-size="12"
-                            fill="white" text-anchor="middle">AUTO SERWIS</text>
-                    </svg>
-                </a>
-                <p style="color: var(--text-light); max-width: 600px; margin: 0 auto;">Profesjonalny serwis samochodowy
-                    Nowy Sącz. Pasja, doświadczenie i najwyższa jakość napraw od 2022 roku.</p>
-            </div>
-            <div class="bottom-bar"
-                style="border-top: 1px solid rgba(0,0,0,0.05); padding-top: 2rem; display: flex; justify-content: center; font-size: 0.85rem; color: var(--text-light);">
-                <div>© 2022 - 2025 APM Automotive & Home Solutions. Wszystkie prawa zastrzeżone.</div>
+        style="background: var(--bg-light); border-top: 1px solid rgba(0,0,0,0.05); padding: 5rem 0 3rem; color: var(--text-main);">
+        <div class="container" style="text-align: center;">
+            <a href="#" class="logo" style="display: inline-block; margin-bottom: 2rem;">
+                <svg viewBox="0 0 450 200" style="height: 80px; width: auto;">
+                    <!-- Car Silhouette -->
+                    <path d="M70 70 C 120 30, 250 20, 380 70 M 380 70 L 420 100 M 420 100 C 400 90, 380 85, 360 85"
+                        fill="none" stroke="#1a1c20" stroke-width="3" stroke-linecap="round" />
+                    <path d="M80 85 C 150 45, 300 45, 410 110" fill="none" stroke="#1a1c20" stroke-width="4"
+                        stroke-linecap="round" />
+
+                    <!-- APM Text -->
+                    <text x="110" y="125" font-family="Arial Black, sans-serif" font-weight="900" font-size="70"
+                        font-style="italic" letter-spacing="-2">
+                        <tspan fill="#e31e24">A</tspan>
+                        <tspan fill="#1a1c20">PM</tspan>
+                    </text>
+
+                    <!-- Wrench Banner -->
+                    <path
+                        d="M30 145 C 30 125, 80 125, 80 145 L 340 145 L 370 120 L 410 145 L 370 170 L 340 145 L 80 145 C 80 165, 30 165, 30 145 Z"
+                        fill="#e31e24" />
+                    <!-- Wrench Teeth (Left) -->
+                    <circle cx="55" cy="145" r="15" fill="white" />
+                    <path
+                        d="M55 130 L 58 135 L 52 135 Z M 55 160 L 58 155 L 52 155 Z M 40 145 L 45 142 L 45 148 Z M 70 145 L 65 142 L 65 148 Z"
+                        fill="#e31e24" />
+
+                    <!-- Auto Serwis Text -->
+                    <text x="215" y="160" font-family="Arial Black, sans-serif" font-weight="900" font-size="22"
+                        font-style="italic" fill="white" text-anchor="middle">AUTO SERWIS</text>
+                </svg>
+            </a>
+            <p
+                style="color: var(--text-light); max-width: 600px; margin: 0 auto 2.5rem; font-size: 1rem; line-height: 1.8;">
+                Profesjonalny serwis samochodowy Nowy Sącz. Pasja, doświadczenie i najwyższa jakość napraw od 2022 roku.
+            </p>
+            <div
+                style="padding-top: 2.5rem; border-top: 1px solid rgba(0,0,0,0.05); font-size: 0.9rem; color: var(--text-light);">
+                © 2012 - 2026 APM Automotive. Wszystkie prawa zastrzeżone.
             </div>
         </div>
     </footer>
