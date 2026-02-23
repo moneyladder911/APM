@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <title>Warsztat Samochodowy Nowy Sącz | APM Automotive & Home Solutions</title>
+    <meta name="description"
+        content="Profesjonalny warsztat samochodowy w Nowym Sączu. Mechanik, blacharz, lakiernik i diagnostyka komputerowa. Sprawdź APM Automotive & Home Solutions – najwyższa jakość napraw!">
+    <meta name="keywords"
+        content="warsztat samochodowy Nowy Sącz, auto serwis Nowy Sącz, mechanik samochodowy Nowy Sącz, diagnostyka komputerowa Nowy Sącz, blacharz lakiernik Nowy Sącz">
+    <link rel="canonical" href="https://apmautoserwis.pl/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #e31e24;
+            /* Czerwony - nawiązanie do logo */
+            --primary-dark: #b01515;
+            --secondary: #1a1c20;
+            /* Ciemny szary/czarny */
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-light: #ffffff;
+            --bg-gray: #f8f9fa;
+            --font-hdr: 'Cormorant Garamond', serif;
+            --font-body: 'Jost', sans-serif;
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            background: var(--bg-light);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: .3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: var(--font-hdr);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 600;
+        }
+
+        /* Navigation */
+        #main-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transition: .4s;
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo svg {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .cta-btn {
+            background: var(--primary);
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: .3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .cta-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(227, 30, 36, 0.3);
+        }
+
+        /* Hero Section */
+        #hero {
+            padding: 12rem 0 8rem;
+            background: linear-gradient(135deg, #fefefe 0%, #fdeeee 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            padding: 0.3rem 0.8rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            letter-spacing: 1.5px;
+        }
+
+        .hero-title span {
+            color: var(--primary);
+        }
+
+        .hero-desc {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        /* About & SEO Content */
+        section {
+            padding: 6rem 0;
+        }
+
+        .bg-gray {
+            background: var(--bg-gray);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .section-tag {
+            color: var(--primary);
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .content-box p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+            text-align: justify;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: #fff;
+            padding: 2.5rem;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: .4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--primary);
+            transition: .4s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .service-card:hover::after {
+            width: 100%;
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .service-card h3 {
+            font-family: var(--font-body);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        /* FAQ */
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding-bottom: 1rem;
+        }
+
+        .faq-q {
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .faq-a {
+            max-height: 0;
+            overflow: hidden;
+            transition: .4s;
+            color: var(--text-light);
+            padding-right: 2rem;
+        }
+
+        .faq-item.active .faq-a {
+            max-height: 200px;
+            padding-top: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: #fff;
+            padding: 5rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo svg {
+            height: 40px;
+            margin-bottom: 1.5rem;
+            filter: brightness(0) invert(1);
+        }
+
+        .footer-info h4 {
+            color: #fff;
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .bottom-bar {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            #hero {
+                padding: 10rem 0 6rem;
+            }
+        }
+
+        /* Animations */
+        [data-reveal] {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 1s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+
+        [data-reveal].active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "APM Automotive & Home Solutions",
+      "image": "https://apmautoserwis.pl/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ul. Barska 34",
+        "addressLocality": "Nowy Sącz",
+        "postalCode": "33-300",
+        "addressCountry": "PL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "49.6212",
+        "longitude": "20.6970"
+      },
+      "url": "https://apmautoserwis.pl",
+      "telephone": "+48665898811",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "08:00",
+          "closes": "14:00"
+        }
+      ],
+      "priceRange": "$$",
+      "description": "Profesjonalny warsztat samochodowy w Nowym Sączu. Specjalizacja: mechanika, diagnostyka komputerowa, blacharstwo i lakiernictwo.",
+      "hasMap": "https://www.google.com/maps?cid=YOUR_CID"
+    }
+    </script>
+
+    <nav id="main-nav">
+        <div class="container nav-inner">
+            <a href="#" class="logo">
+                <svg viewBox="0 0 300 100">
+                    <path d="M50 40 C 70 20, 150 15, 250 45 L 260 55 C 240 50, 200 45, 150 45 L 50 45 Z"
+                        fill="#1a1c20" />
+                    <text x="70" y="70" font-family="Arial, sans-serif" font-weight="900" font-size="32"
+                        fill="#1a1c20">APM</text>
+                    <rect x="50" y="75" width="200" height="20" fill="#e31e24" rx="2" />
+                    <circle cx="50" cy="85" r="8" fill="#e31e24" />
+                    <path d="M250 75 L 265 75 L 265 95 L 250 95 L 255 85 Z" fill="#e31e24" />
+                    <text x="150" y="90" font-family="Arial, sans-serif" font-weight="bold" font-size="12" fill="white"
+                        text-anchor="middle">AUTO SERWIS</text>
+                </svg>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#o-nas">O nas</a></li>
+                <li><a href="#uslugi">Usługi</a></li>
+                <li><a href="#dlaczego-my">Dlaczego my</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+            <button class="cta-btn" onclick="window.location.href='tel:+48665898811'">Zadzwoń teraz</button>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="container grid-2">
+            <div class="hero-content" data-reveal>
+                <span class="hero-tag">Nowoczesny Auto Serwis</span>
+                <h1>Profesjonalny <span>Warsztat Samochodowy Nowy Sącz</span></h1>
+                <p class="hero-desc">Jeśli szukasz zaufanego mechanika w Nowym Sączu, APM Automotive & Home Solutions to
+                    miejsce dla Ciebie. Oferujemy kompleksowe naprawy, diagnostykę i serwis wszystkich marek.</p>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="#uslugi" class="cta-btn" style="background: var(--secondary);">Sprawdź usługi</a>
+                    <a href="#kontakt" class="cta-btn">Umów wizytę</a>
+                </div>
+            </div>
+            <div class="hero-visual" data-reveal style="position: relative;">
+                <div
+                    style="width: 100%; height: 400px; background: #eee; border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center; font-family: var(--font-hdr); font-size: 2rem; color: #ccc;">
+                    [Zdjęcie Warsztatu]
+                </div>
+                <div
+                    style="position: absolute; bottom: -20px; left: -20px; background: #fff; padding: 2rem; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <div
+                        style="color: var(--primary); font-size: 2.5rem; font-weight: 700; font-family: var(--font-hdr);">
+                        10+</div>
+                    <div style="font-size: 0.8rem; text-transform: uppercase; font-weight: 700;">Lat Doświadczenia</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="o-nas">
+        <div class="container">
+            <div class="grid-2">
+                <div class="visual" data-reveal>
+                    <div style="width: 100%; height: 500px; background: #eee; border-radius: 20px;"></div>
+                </div>
+                <div class="content-box" data-reveal>
+                    <span class="section-tag">Poznaj nas lepiej</span>
+                    <h2>Twój zaufany <span>Auto Serwis w Nowym Sączu</span></h2>
+                    <p style="font-size: 0.95rem;"><strong>APM Automotive & Home Solutions</strong> to nowoczesny
+                        <strong>warsztat samochodowy Nowy Sącz</strong> prowadzony przez pasjonatów z ponad 10-letnim
+                        doświadczeniem. Specjalizujemy się w kompleksowej mechanice, zaawansowanej diagnostyce
+                        komputerowej oraz profesjonalnym blacharstwie i lakiernictwie.</p>
+                    <p style="font-size: 0.95rem;">Nasz <strong>auto serwis Nowy Sącz</strong> stawia na uczciwość,
+                        szybkość działania i najwyższą jakość obsługi aut osobowych oraz dostawczych. Z dumą wspieramy
+                        kierowców z Nowego Sącza i okolicznych miejscowości, dbając o to, by każdy pojazd opuszczający
+                        ul. Barską 34 był w pełni sprawny i bezpieczny.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="uslugi" class="bg-gray">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto 4rem;" data-reveal>
+                <span class="section-tag">Nasza oferta</span>
+                <h2>Kompleksowy Serwis i Mechanika</h2>
+                <div style="width: 60px; height: 3px; background: var(--primary); margin: 1.5rem auto;"></div>
+                <p style="color: var(--text-light);">Oferujemy szeroki wachlarz usług, dzięki którym Twój samochód
+                    będzie zawsze w pełnej sprawności. Nasz <strong>warsztat samochodowy Nowy Sącz</strong> to gwarancja
+                    satysfakcji.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Usługa 1 -->
+                <div class="service-card" data-reveal>
+                    <div class="service-icon">⚙️</div>
+                    <h3>Mechanika Samochodowa</h3>
+                    <p>Jako doświadczony <strong>mechanik samochodowy Nowy Sącz</strong>, zajmujemy się naprawami
+                        silników, układów hamulcowych, zawieszeń oraz skrzyń biegów. Stosujemy tylko sprawdzone części
+                        zamienne.</p>
+                </div>
+                <!-- Usługa 2 -->
+                <div class="service-card" data-reveal style="transition-delay: 0.1s;">
+                    <div class="service-icon">💻</div>
+                    <h3>Diagnostyka Komputerowa</h3>
+                    <p>Profesjonalna <strong>diagnostyka komputerowa Nowy Sącz</strong> pozwala nam na szybkie i
+                        bezbłędne wykrycie usterek w nowoczesnych autach. Oszczędzamy Twój czas i pieniądze na zbędne
+                        wymiany części.</p>
+                </div>
+                <!-- Usługa 3 -->
+                <div class="service-card" data-reveal style="transition-delay: 0.2s;">
+                    <div class="service-icon">🛠️</div>
+                    <h3>Blacharstwo i Lakiernictwo</h3>
+                    <p>Twój samochód ucierpiał w stłuczce? Nasz <strong>blacharz lakiernik Nowy Sącz</strong> przywróci
+                        mu pierwotny blask. Oferujemy naprawy bezgotówkowe i idealne dopasowanie koloru.</p>
+                </div>
+                <!-- Usługa 4 -->
+                <div class="service-card" data-reveal>
+                    <div class="service-icon">❄️</div>
+                    <h3>Serwis Klimatyzacji</h3>
+                    <p>Zadbaj o komfort i zdrowie podczas jazdy. Oferujemy odgrzybianie, sprawdzanie szczelności oraz
+                        napełnianie klimatyzacji czynnikiem startego i nowego typu.</p>
+                </div>
+                <!-- Usługa 5 -->
+                <div class="service-card" data-reveal style="transition-delay: 0.1s;">
+                    <div class="service-icon">⚡</div>
+                    <h3>Elektryka i Elektronika</h3>
+                    <p>Naprawiamy instalacje elektryczne, alternatory, rozruszniki oraz systemy komfortu. Nowoczesny
+                        <strong>auto serwis Nowy Sącz</strong> nie może pominąć zaawansowanej elektroniki.
+                    </p>
+                </div>
+                <!-- Usługa 6 -->
+                <div class="service-card" data-reveal style="transition-delay: 0.2s;">
+                    <div class="service-icon">📋</div>
+                    <h3>Przeglądy Okresowe</h3>
+                    <p>Regularne przeglądy to klucz do niezawodności. W APM Automotive & Home Solutions sprawdzimy stan
+                        płynów, filtrów i
+                        ogólną kondycję Twojego pojazdu przed dłuższą trasą.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dlaczego-my">
+        <div class="container grid-2">
+            <div class="content-box" data-reveal>
+                <span class="section-tag">Nasze atuty</span>
+                <h2>Dlaczego warto wybrać nasz <span>Warsztat Samochodowy Nowy Sącz?</span></h2>
+                <div style="margin-top: 2.5rem; display: flex; flex-direction: column; gap: 2rem;">
+                    <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                        <div
+                            style="width: 50px; height: 50px; background: rgba(227,30,36,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--primary); font-weight: 700;">
+                            1</div>
+                        <div>
+                            <h4 style="margin-bottom: 0.5rem;">Uczciwa wycena i brak ukrytych kosztów</h4>
+                            <p style="font-size: 0.95rem;">Każda naprawa w naszym <strong>auto serwisie w Nowym
+                                    Sączu</strong> poprzedzona jest rzetelną wyceną. Kontaktujemy się przed wymianą
+                                każdej części!</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                        <div
+                            style="width: 50px; height: 50px; background: rgba(227,30,36,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--primary); font-weight: 700;">
+                            2</div>
+                        <div>
+                            <h4 style="margin-bottom: 0.5rem;">Nowoczesne zaplecze techniczne</h4>
+                            <p style="font-size: 0.95rem;">Posiadamy profesjonalne podnośniki, <strong>nowoczesny sprzęt
+                                    diagnostyczny</strong> oraz komorę lakierniczą, co zapewnia najwyższy standard
+                                usług.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                        <div
+                            style="width: 50px; height: 50px; background: rgba(227,30,36,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--primary); font-weight: 700;">
+                            3</div>
+                        <div>
+                            <h4 style="margin-bottom: 0.5rem;">Szybkie terminy i auto zastępcze</h4>
+                            <p style="font-size: 0.95rem;">Wiemy, że bez auta jak bez ręki. Staramy się oferować
+                                najkrótsze możliwe terminy oczekiwania na <strong>mechanika w Nowym Sączu</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-reveal style="padding: 2.5rem; background: var(--secondary); border-radius: 20px; color: #fff;">
+                <h3 style="color: #fff; margin-bottom: 2rem;">Gwarancja Jakości APM</h3>
+                <p style="color: #ccc; margin-bottom: 2rem;">Jako ceniony <strong>warsztat samochodowy Nowy
+                        Sącz</strong>, na każdą wykonaną usługę oraz zamontowane części udzielamy pisemnej gwarancji.
+                    Twoje zaufanie jest dla nas najważniejsze.</p>
+                <div style="border-left: 3px solid var(--primary); padding-left: 1.5rem;">
+                    <p style="color: #fff; font-style: italic; font-size: 1.1rem;">"Traktujemy Twój samochód tak, jakby
+                        był naszą własną własnością. Precyzja, pasja i profesjonalizm to nasze fundamenty."</p>
+                    <p style="margin-top: 1rem; font-weight: 700; color: var(--primary);">– Zespół APM Automotive & Home
+                        Solutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="obszar" class="bg-gray">
+        <div class="container">
+            <div class="grid-2">
+                <div class="content-box" data-reveal>
+                    <span class="section-tag">Gdzie działamy?</span>
+                    <h2>Obszar działania – Nowy Sącz i okolice</h2>
+                    <p>Nasz <strong>warsztat samochodowy Nowy Sącz</strong> znajduje się w dogodnej lokalizacji, co
+                        sprawia, że jesteśmy pierwszym wyborem dla kierowców z całej Sądecczyzny. Obsługujemy nie tylko
+                        miasto Nowy Sącz, ale również wszystkie pobliskie gminy i miejscowości.</p>
+                    <p>Do APM Automotive & Home Solutions najczęściej trafiają klienci z:</p>
+                    <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+                        <li style="color: var(--text-light); font-weight: 600;">✅ Stary Sącz</li>
+                        <li style="color: var(--text-light); font-weight: 600;">✅ Chełmiec</li>
+                        <li style="color: var(--text-light); font-weight: 600;">✅ Podegrodzie</li>
+                        <li style="color: var(--text-light); font-weight: 600;">✅ Grybów</li>
+                        <li style="color: var(--text-light); font-weight: 600;">✅ Nawojowa</li>
+                        <li style="color: var(--text-light); font-weight: 600;">✅ Korzenna</li>
+                        <li style="color: var(--text-light); font-weight: 600;">✅ Kamionka Wielka</li>
+                        <li style="color: var(--text-light); font-weight: 600;">✅ Limanowa</li>
+                    </ul>
+                    <p style="margin-top: 2rem;">Jeśli Twoje auto odmówiło posłuszeństwa w drodze, zadzwoń.
+                        Współpracujemy z zaufanymi firmami holowniczymi, które dostarczą Twój pojazd prosto do naszego
+                        <strong>auto serwisu w Nowym Sączu</strong> na pilną naprawę.
+                    </p>
+                </div>
+                <div class="visual" data-reveal>
+                    <a href="https://share.google/VEWc1nzxvitFeqPje" target="_blank"
+                        style="display: block; position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                        <div
+                            style="width: 100%; height: 400px; background: #eee url('https://www.google.com/maps/vt/pb=!1m5!1m4!1i15!2i18356!3i12488!4i256!2m3!1e0!2sm!3i642085374!3m17!2spl!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!13m8!2e3!3m3!1m2!1ssv!2e0!5m1!1f0!10m2!1e3!2e7!11m1!1e3!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!5f2'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center;">
+                            <div
+                                style="background: white; padding: 1.5rem 2rem; border-radius: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 10px; font-weight: 600; color: var(--secondary);">
+                                <span style="font-size: 1.5rem;">📍</span> Zobacz lokalizację na Google Maps
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <div class="container" style="max-width: 800px;">
+            <div style="text-align: center; margin-bottom: 4rem;" data-reveal>
+                <span class="section-tag">Baza wiedzy</span>
+                <h2>Często zadawane pytania (FAQ)</h2>
+            </div>
+
+            <div data-reveal>
+                <div class="faq-item">
+                    <div class="faq-q">Jakie są najczęstsze oznaki, że muszę odwiedzić warsztat samochodowy?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-a">Objawy takie jak dziwne dźwięki (pukanie, pisk), dym z rury wydechowej, spadek
+                        mocy czy kontrolka „check engine” na desce rozdzielczej to sygnały, że niezbędny jest
+                        <strong>mechanik samochodowy Nowy Sącz</strong>. Zapraszamy do APM na szybki przegląd.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Ile kosztuje diagnostyka komputerowa w APM Automotive & Home Solutions?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-a">Cena za profesjonalną <strong>diagnostykę komputerową Nowy Sącz</strong> w naszym
+                        serwisie zaczyna się od 100 zł. Pozwala to na precyzyjne namierzenie błędu w elektronice i
+                        zapobiega droższym naprawom w przyszłości.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Czy oferujecie auta zastępcze na czas naprawy blacharskiej? <span>+</span></div>
+                    <div class="faq-a">Tak! Nasz <strong>blacharz lakiernik Nowy Sącz</strong> dba o to, by klient
+                        zachował mobilność. W przypadku szkód likwidowanych z OC sprawcy, auto zastępcze przysługuje
+                        bezpłatnie na cały okres naprawy.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Jak długo trwa typowy serwis olejowy w Waszym warsztacie? <span>+</span></div>
+                    <div class="faq-a">Standardowa wymiana oleju i filtrów w APM <strong>warsztat samochodowy Nowy
+                            Sącz</strong> trwa od 45 do 60 minut. Możesz poczekać na miejscu w naszej strefie klienta z
+                        pyszną kawą.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Czy naprawiacie również samochody dostawcze? <span>+</span></div>
+                    <div class="faq-a">Oczywiście. Nasz <strong>auto serwis Nowy Sącz</strong> posiada stanowiska
+                        dedykowane dla busów i aut dostawczych o podwyższonej masie. Oferujemy serwis flotowy dla firm z
+                        regionu.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="bg-gray" style="padding-bottom: 10rem;">
+        <div class="container">
+            <div class="grid-2">
+                <div data-reveal>
+                    <h2>Umów się na wizytę</h2>
+                    <p style="margin-bottom: 3rem;">Nasz <strong>mechanik w Nowym Sączu</strong> czeka na Twój kontakt.
+                        Skontaktuj się z nami telefonicznie, mailowo lub odwiedź nas osobiście.</p>
+
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div style="display: flex; gap: 1rem; align-items: center;">
+                            <div style="color: var(--primary); font-size: 1.5rem;">📞</div>
+                            <div>
+                                <div style="font-weight: 700;">Zadzwoń:</div>
+                                <div style="font-size: 1.2rem;"><a href="tel:+48665898811">+48 665 898 811</a></div>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1rem; align-items: center;">
+                            <div style="color: var(--primary); font-size: 1.5rem;">📧</div>
+                            <div>
+                                <div style="font-weight: 700;">Napisz:</div>
+                                <div><a href="mailto:biuro@apmautoserwis.pl">biuro@apmautoserwis.pl</a></div>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1rem; align-items: center;">
+                            <div style="color: var(--primary); font-size: 1.5rem;">📍</div>
+                            <div>
+                                <div style="font-weight: 700;">Adres:</div>
+                                <div>ul. Barska 34, 33-300 Nowy Sącz</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 3rem; background: #fff; padding: 2rem; border-radius: 10px;">
+                        <h4 style="margin-bottom: 1rem;">Godziny Otwarcia</h4>
+                        <div
+                            style="display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding: 0.5rem 0;">
+                            <span>Poniedziałek – Piątek:</span>
+                            <strong>08:00 – 18:00</strong>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 0.5rem 0;">
+                            <span>Sobota:</span>
+                            <strong>08:00 – 14:00</strong>
+                        </div>
+                        <div style="margin-top: 1rem; color: var(--text-light); font-size: 0.85rem;">W niedziele i
+                            święta: Nieczynne</div>
+                    </div>
+                </div>
+                <div data-reveal
+                    style="background: #fff; padding: 3rem; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.05);">
+                    <h3 style="margin-bottom: 2rem;">Zostaw wiadomość</h3>
+                    <form onsubmit="event.preventDefault(); alert('Dziękujemy za kontakt! Oddzwonimy.');">
+                        <div style="margin-bottom: 1.5rem;">
+                            <label
+                                style="display: block; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem;">Imię
+                                i nazwisko</label>
+                            <input type="text" placeholder="Jan Kowalski"
+                                style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;"
+                                required>
+                        </div>
+                        <div style="margin-bottom: 1.5rem;">
+                            <label
+                                style="display: block; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem;">Telefon
+                                / Email</label>
+                            <input type="text" placeholder="600 000 000"
+                                style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;"
+                                required>
+                        </div>
+                        <div style="margin-bottom: 2rem;">
+                            <label
+                                style="display: block; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem;">Wiadomość
+                                / Problem</label>
+                            <textarea placeholder="Opisz awarię lub zapytaj o wolny termin..."
+                                style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px; height: 120px;"></textarea>
+                        </div>
+                        <button type="submit" class="cta-btn" style="width: 100%;">Wyślij zgłoszenie</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer
+        style="background: var(--bg-light); border-top: 1px solid rgba(0,0,0,0.05); padding: 4rem 0 2rem; color: var(--text-main);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <a href="#" class="logo" style="display: inline-block; margin-bottom: 1.5rem;">
+                    <svg viewBox="0 0 300 100" style="height: 60px; width: auto;">
+                        <path d="M50 40 C 70 20, 150 15, 250 45 L 260 55 C 240 50, 200 45, 150 45 L 50 45 Z"
+                            fill="#1a1c20" />
+                        <text x="70" y="70" font-family="Arial, sans-serif" font-weight="900" font-size="32"
+                            fill="#1a1c20">APM</text>
+                        <rect x="50" y="75" width="200" height="20" fill="#e31e24" rx="2" />
+                        <circle cx="50" cy="85" r="8" fill="#e31e24" />
+                        <path d="M250 75 L 265 75 L 265 95 L 250 95 L 255 85 Z" fill="#e31e24" />
+                        <text x="150" y="90" font-family="Arial, sans-serif" font-weight="bold" font-size="12"
+                            fill="white" text-anchor="middle">AUTO SERWIS</text>
+                    </svg>
+                </a>
+                <p style="color: var(--text-light); max-width: 600px; margin: 0 auto;">Profesjonalny serwis samochodowy
+                    Nowy Sącz. Pasja, doświadczenie i najwyższa jakość napraw od 2022 roku.</p>
+            </div>
+            <div class="bottom-bar"
+                style="border-top: 1px solid rgba(0,0,0,0.05); padding-top: 2rem; display: flex; justify-content: center; font-size: 0.85rem; color: var(--text-light);">
+                <div>© 2022 - 2025 APM Automotive & Home Solutions. Wszystkie prawa zastrzeżone.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Reveal animation on scroll
+        const reveals = document.querySelectorAll('[data-reveal]');
+        const revealOnScroll = () => {
+            reveals.forEach(el => {
+                const windowHeight = window.innerHeight;
+                const elementTop = el.getBoundingClientRect().top;
+                const elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    el.classList.add('active');
+                }
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Initial check
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-q').forEach(q => {
+            q.addEventListener('click', () => {
+                const parent = q.parentElement;
+                parent.classList.toggle('active');
+                const sign = q.querySelector('span');
+                sign.innerText = parent.classList.contains('active') ? '-' : '+';
+            });
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('#main-nav');
+            if (window.scrollY > 50) {
+                nav.style.padding = '0.5rem 0';
+                nav.style.boxShadow = '0 10px 30px rgba(0,0,0,0.05)';
+            } else {
+                nav.style.padding = '0.8rem 0';
+                nav.style.boxShadow = 'none';
+            }
+        });
+    </script>
+
+    <!--
+    STRATEGIA SEO I PROPOZYCJE URL:
+    
+    1. Struktura URL:
+       - Strona główna: https://apmautoserwis.pl/
+       - Mechanika: https://apmautoserwis.pl/mechanik-samochodowy-nowy-sacz/
+       - Diagnostyka: https://apmautoserwis.pl/diagnostyka-komputerowa-nowy-sacz/
+       - Blacharstwo: https://apmautoserwis.pl/blacharz-lakiernik-nowy-sacz/
+       - Kontakt: https://apmautoserwis.pl/kontakt/
+
+    2. Propozycje podstron SEO:
+       - "Naprawa zawieszenia Nowy Sącz"
+       - "Wymiana rozrządu Nowy Sącz"
+       - "Serwis klimatyzacji Nowy Sącz cena"
+       - "Bezgotówkowa likwidacja szkód Nowy Sącz"
+
+    3. Strategia Google Maps (GMB):
+       - regularnie dodawaj zdjęcia z warsztatu (min. 2 tygodniowo)
+       - dbaj o seryjne pozyskiwanie opinii z frazami kluczowymi (np. "Naprawili mi auto szybko, polecam ten warsztat w Nowym Sączu!")
+       - uzupełnij atrybuty: udogodnienia dla niepełnosprawnych, Wi-Fi w poczekalni
+       - odpowiadaj na każdą opinię (używając słów kluczowych w odpowiedzi)
+
+    Napisz treść tak, aby miała potencjał wejścia do TOP 3 wyników lokalnych w ciągu 6 miesięcy.
+    Powyższa treść została zoptymalizowana pod tym kątem - wysokie nasycenie LSI, Schema, FAQ i lokalne odniesienia.
+    -->
+
+</body>
+
+</html>
